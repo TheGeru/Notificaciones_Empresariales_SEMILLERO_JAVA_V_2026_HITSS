@@ -1,23 +1,30 @@
-<<<<<<< HEAD
-# Notificaciones_Empresariales_SEMILLERO_JAVA_V_2026_HITSS
-Ejercicio aplicando lo visto durante el periodo que llevo en el semillero de java de HITSS
-=======
-## Getting Started
+# Sistema de Notificaciones Empresariales
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Proyecto desarrollado como parte del semillero de Java de HITSS para poner en práctica los conceptos de Programación Orientada a Objetos y las características modernas de Java 21.
 
-## Folder Structure
+## Objetivo
 
-The workspace contains two folders by default, where:
+Simular un sistema capaz de manejar diferentes tipos de notificaciones empresariales utilizando un diseño orientado a objetos, aplicando buenas prácticas de desarrollo.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Conceptos aplicados
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- Records
+- Interfaces `sealed`
+- Pattern Matching con `switch`
+- Polimorfismo
+- Encapsulación
+- Constructores compactos
+- Validación de datos mediante excepciones (`IllegalArgumentException`)
+- Organización del código por responsabilidades
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Estructura del proyecto
 
-## Dependency Management
+- `Notification`: interfaz sellada que define la jerarquía de notificaciones.
+- `EmailNotification`, `SmsNotification` y `PushNotification`: implementaciones mediante `record`.
+- `NotificationProcessor`: procesa el arreglo de notificaciones y genera las estadísticas.
+- `NotificationStatistics`: almacena y administra los contadores de cada tipo de notificación.
+- `App`: punto de entrada de la aplicación.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
->>>>>>> b74a002 (Commit inicial)
+## Resultado
+
+El sistema identifica el tipo de cada notificación utilizando **Pattern Matching** en un `switch` moderno y muestra un resumen con la cantidad de notificaciones procesadas por cada categoría.
